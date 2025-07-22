@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Antonitte R. Monterola | Programmer Portfolio</title>
+  <title>Antonitte R. Monterola | Portfolio</title>
   <style>
-    /* Google Font */
     @import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
 
     * {
@@ -18,8 +17,8 @@
     html, body {
       height: 100%;
       font-family: 'Fira Code', monospace;
-      background-color: #0f1117;
-      color: #e0e0e0;
+      background-color: #000;
+      color: #fff;
       overflow-x: hidden;
       position: relative;
     }
@@ -37,11 +36,11 @@
       position: sticky;
       top: 0;
       z-index: 2;
-      background-color: rgba(15, 17, 23, 0.9);
+      background-color: rgba(0, 0, 0, 0.9);
       padding: 20px;
       display: flex;
       justify-content: center;
-      border-bottom: 1px solid #1f1f1f;
+      border-bottom: 1px solid #333;
     }
 
     nav ul {
@@ -52,7 +51,7 @@
 
     nav a {
       text-decoration: none;
-      color: #00ffcc;
+      color: #fff;
       font-weight: bold;
       position: relative;
       transition: 0.3s;
@@ -65,7 +64,7 @@
       height: 2px;
       bottom: -4px;
       left: 0;
-      background-color: #00ffcc;
+      background-color: #fff;
       transition: width 0.3s ease-in-out;
     }
 
@@ -74,7 +73,7 @@
     }
 
     nav a:hover {
-      color: #fff;
+      color: #ccc;
     }
 
     section {
@@ -83,10 +82,10 @@
       max-width: 800px;
       margin: 80px auto;
       padding: 40px;
-      background-color: rgba(26, 29, 38, 0.95);
-      border-left: 4px solid #00ffcc;
+      background-color: rgba(0, 0, 0, 0.95);
+      border-left: 4px solid #fff;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,255,204,0.1);
+      box-shadow: 0 0 10px rgba(255,255,255,0.05);
       animation: fadeInUp 1s ease forwards;
       opacity: 0;
       transform: translateY(20px);
@@ -102,7 +101,68 @@
     }
 
     strong {
-      color: #00ffcc;
+      color: #fff;
+    }
+
+    .skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.skills-grid span {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 10px 16px;
+  border: 1px solid #fff;
+  border-radius: 30px;
+  font-size: 0.95rem;
+  color: #fff;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.skills-grid span:hover {
+  background-color: #fff;
+  color: #000;
+  transform: scale(1.05);
+  cursor: default;
+}
+
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #fff;
+      margin-bottom: 20px;
+    }
+
+    .gallery {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      max-width: 180px;
+      height: auto;
+      border: 1px solid #333;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      color: #666;
+      padding: 40px 0 20px;
+      font-size: 0.9rem;
+      z-index: 1;
+      position: relative;
     }
 
     @keyframes fadeInUp {
@@ -110,15 +170,6 @@
         opacity: 1;
         transform: translateY(0);
       }
-    }
-
-    footer {
-      text-align: center;
-      color: #777;
-      padding: 40px 0 20px;
-      font-size: 0.9rem;
-      z-index: 1;
-      position: relative;
     }
 
     @media (max-width: 600px) {
@@ -129,43 +180,67 @@
       section {
         margin: 40px 20px;
       }
+      .gallery {
+        justify-content: center;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Matrix Background Canvas -->
+  <!-- Matrix Background -->
   <canvas id="matrix"></canvas>
 
   <nav>
     <ul>
       <li><a href="#Home">Home</a></li>
       <li><a href="#About">About</a></li>
+      <li><a href="#Skills">Skills</a></li>
       <li><a href="#Contact">Contact</a></li>
     </ul>
   </nav>
 
   <section id="Home">
-    <p>Hello World! I'm <strong>Antonitte R. Monterola</strong>,</p>
-    <p>a passionate <strong>developer</strong> who loves clean code, good UI, and solving problems.</p>
+    <div style="text-align: center;">
+      <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
+      <p>Hello programmers! I'm <strong>Antonitte R. Monterola</strong></p>
+      <p>a passionate <strong>developer</strong>  a passionate programmer dedicated to crafting efficient, innovative, and user-centric software solutions. .</p>
+    </div>
   </section>
 
   <section id="About">
-    <p>🎓 I graduated from <strong>Mindanao State University - Buug</strong> with a degree in <strong>BSIT</strong>, majoring in <strong>Database Systems</strong>.</p>
-    <p>💡 I enjoy building digital experiences and automating processes to make life easier.</p>
+    <p>🎓 I graduated from <strong>Mindanao State University - Buug</strong> with a degree in <strong>BSIT</strong>, majoring in <strong>Database Systems. As a programmer, I approach every project with a mindset focused on problem-solving, clarity, and continuous improvement. I believe that clean, readable code and an understanding of user needs are at the heart of every successful application. My projects—whether academic, personal, or freelance—reflect my commitment to functionality, user experience, and visual design. I take pride in translating complex requirements into intuitive, responsive, and scalable digital platforms.</strong>.</p>
+    <p>💡 Come and look at my projects with enthusiasm and interests:</p>
+    <div class="gallery">
+      <img src="project1.jpg" alt="Project 1">
+      <img src="project2.jpg" alt="Project 2">
+      <img src="project3.jpg" alt="Project 3">
+    </div>
   </section>
+
+    <section id="Skills">
+    <h2 style="margin-bottom: 20px;">🛠️ Skills</h2>
+    <div class="skills-grid">
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>JavaScript</span>
+      <span>MySQL</span>
+      <span>UI/UX Design</span>
+    </div>
+  </section>
+
 
   <section id="Contact">
     <p>📞 Let's build something cool together.</p>
-    <p>Reach me at: <strong>+63 967 902 7291</strong></p>
-    <p>📧 Email: <strong>nittemonterola@gmail.com</strong></p>
+    <p>Phone: <strong>+63 967 902 7291</strong></p>
+    <p>Email: <strong>nittemonterola@gmail.com</strong></p>
   </section>
 
   <footer>
-    &copy; 2025 Antonitte R. Monterola • Made with 💻 & ☕
+    &copy; 2025 Antonitte R. Monterola • Built with 💻 & ☕
   </footer>
 
-  <!-- Matrix Code Rain Animation Script -->
+  <!-- Matrix Animation Script -->
   <script>
     const canvas = document.getElementById("matrix");
     const ctx = canvas.getContext("2d");
@@ -183,10 +258,10 @@
     }
 
     function draw() {
-      ctx.fillStyle = "rgba(15, 17, 23, 0.1)";
+      ctx.fillStyle = "rgba(0, 0, 0, 0.1)";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-      ctx.fillStyle = "#00ffcc";
+      ctx.fillStyle = "#fff";
       ctx.font = fontSize + "px Fira Code";
 
       for (let i = 0; i < drops.length; i++) {
@@ -202,6 +277,7 @@
     }
 
     setInterval(draw, 35);
+
     window.addEventListener('resize', () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
